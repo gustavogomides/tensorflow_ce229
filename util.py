@@ -26,7 +26,7 @@ def plot_data(qty, x_train, y_train):
 
 def get_mnist():
     # read dataset
-    (x_train, y_train), (x_test, y_test) = mnist.load_data(path='./mnist.npz')
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
     # input image dimensions
     img_rows, img_cols = 28, 28
