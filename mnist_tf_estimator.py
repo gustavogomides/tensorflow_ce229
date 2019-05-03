@@ -1,4 +1,4 @@
-from util import plot_data, get_mnist
+from util import plot_data, get_mnist, print_predict_image
 import tensorflow as tf
 import keras
 from time import time
@@ -76,7 +76,7 @@ classifier = tf.estimator.Estimator(
 input_fn = tf.estimator.inputs.numpy_input_fn(x={'X': x_train}, y=y_train, batch_size=128,
                                               num_epochs=None, shuffle=True)
 
-classifier.train(input_fn=input_fn, steps=20)
+classifier.train(input_fn=input_fn, steps=200)
 
 test_fn = tf.estimator.inputs.numpy_input_fn(x={'X': x_test}, y=y_test, num_epochs=1,
                                              shuffle=False)
